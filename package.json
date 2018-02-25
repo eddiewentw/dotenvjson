@@ -1,0 +1,12 @@
+{
+  "name": "dotenvjson",
+  "version": "0.0.1",
+  "description": "Loads environment variables from .json file",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "github.com:EddieWen-Taiwan/dotenvjson.git"
+  },
+  "author": "Eddie Wen <eddiewen.tw@gmail.com>",
+  "license": "MIT"
+}
