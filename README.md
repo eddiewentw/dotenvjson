@@ -11,3 +11,29 @@ $ yarn add @eddiewen/dotenvjson
 
 # npm install --save @eddiewen/dotenvjson
 ```
+
+### Usage
+
+Create a `.env.json` file in the root folder of your project.
+
+```javascript
+const dotenvjson = require('@eddiewen/dotenvjson');
+
+dotenvjson();
+```
+
+And you get `process.env` now.
+
+##### Options
+
+- `path`
+
+Default value: `path.join(process.cwd(), '.env.json')`
+
+You can use a custom config file path.
+
+- `inUpperCase`
+
+Default value: `true`
+
+You don't have to use upper case in config file. Parser transforms them to upper case if this is true. Or spelling names would be kept.
