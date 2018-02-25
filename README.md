@@ -4,3 +4,10 @@
 
 This is a module to load .json file, like `config.json`, and export variables to `process.env`. Inspired by [dotenv](https://github.com/motdotla/dotenv).
 
+### Installation
+
+```bash
+$ yarn add @eddiewen/dotenvjson
+
+# npm install --save @eddiewen/dotenvjson
+```
