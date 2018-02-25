@@ -24,5 +24,10 @@
     "standard-version": "^4.3.0"
   },
   "author": "Eddie Wen <eddiewen.tw@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/EddieWen-Taiwan/dotenvjson",
+  "bugs": {
+    "url": "https://github.com/EddieWen-Taiwan/dotenvjson/issues",
+    "email": "eddiewen.tw@gmail.com"
+  }
 }
