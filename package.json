@@ -3,9 +3,15 @@
   "version": "0.0.1",
   "description": "Loads environment variables from .json file",
   "main": "lib/index.js",
+  "scripts": {
+    "release": "standard-version"
+  },
   "repository": {
     "type": "git",
     "url": "github.com:EddieWen-Taiwan/dotenvjson.git"
+  },
+  "devDependencies": {
+    "standard-version": "^4.3.0"
   },
   "author": "Eddie Wen <eddiewen.tw@gmail.com>",
   "license": "MIT"
