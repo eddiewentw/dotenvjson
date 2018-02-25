@@ -1,5 +1,5 @@
 {
-  "name": "dotenvjson",
+  "name": "@eddiewen/dotenvjson",
   "version": "0.1.1",
   "description": "Loads environment variables from .json file",
   "keywords": [
