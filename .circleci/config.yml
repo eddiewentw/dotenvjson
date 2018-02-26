@@ -20,16 +20,16 @@ jobs:
       - checkout
 
       - run:
-        name: Install node_modules
-        command: yarn
+          name: Install node_modules
+          command: yarn
 
       - run:
-        name: eslint
-        command: yarn run lint:js
+          name: eslint
+          command: yarn run lint:js
 
       - run:
-        name: test
-        command: yarn run test
+          name: test
+          command: yarn run test
 
 workflows:
   version: 2
