@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-	build:
+	test:
 		docker:
 			# specify the version you desire here
 			- image: circleci/node:8.9-browsers
@@ -30,3 +30,9 @@ jobs:
 			- run:
 				name: test
 				command: yarn run test
+
+workflows:
+	version: 2
+	master-workflow:
+		jobs:
+			- test
