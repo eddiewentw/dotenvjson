@@ -1,0 +1,32 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+	build:
+		docker:
+			# specify the version you desire here
+			- image: circleci/node:8.9-browsers
+			
+			# Specify service dependencies here if necessary
+			# CircleCI maintains a library of pre-built images
+			# documented at https://circleci.com/docs/2.0/circleci-images/
+			# - image: circleci/mongo:3.4.4
+
+		working_directory: ~/repo
+
+		steps:
+			- checkout
+
+			- run:
+				name: Install node_modules
+				command: yarn
+
+			- run:
+				name: eslint
+				command: yarn run lint:js
+
+			- run:
+				name: test
+				command: yarn run test
