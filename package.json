@@ -14,7 +14,7 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "lint:js": "eslint ./lib --config .eslintrc.json",
+    "lint:js": "eslint ./lib ./__tests__ --config .eslintrc.json",
     "release": "standard-version"
   },
   "repository": {
