@@ -4,35 +4,35 @@
 #
 version: 2
 jobs:
-	test:
-		docker:
-			# specify the version you desire here
-			- image: circleci/node:7.10
-			
-			# Specify service dependencies here if necessary
-			# CircleCI maintains a library of pre-built images
-			# documented at https://circleci.com/docs/2.0/circleci-images/
-			# - image: circleci/mongo:3.4.4
+  test:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:7.10
 
-		working_directory: ~/repo
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
 
-		steps:
-			- checkout
+    working_directory: ~/repo
 
-			- run:
-				name: Install node_modules
-				command: yarn
+    steps:
+      - checkout
 
-			- run:
-				name: eslint
-				command: yarn run lint:js
+      - run:
+        name: Install node_modules
+        command: yarn
 
-			- run:
-				name: test
-				command: yarn run test
+      - run:
+        name: eslint
+        command: yarn run lint:js
+
+      - run:
+        name: test
+        command: yarn run test
 
 workflows:
-	version: 2
-	master-workflow:
-		jobs:
-			- test
+  version: 2
+  master-workflow:
+    jobs:
+      - test
