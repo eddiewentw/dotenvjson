@@ -24,6 +24,9 @@
     "type": "git",
     "url": "github.com:EddieWen-Taiwan/dotenvjson.git"
   },
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "coveralls": "^3.0.0",
