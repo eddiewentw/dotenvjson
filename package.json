@@ -15,6 +15,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest --coverage",
+    "pretest:ci": "npm run test",
+    "test:ci": "cat ./coverage/lcov.info | coveralls",
     "lint:js": "eslint ./lib ./__tests__ --config .eslintrc.json",
     "release": "standard-version"
   },
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
+    "coveralls": "^3.0.0",
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
