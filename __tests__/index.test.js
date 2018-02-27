@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 const mockConfig = {
 	path: '/does-not-matter',
 	inUpperCase: true,
