@@ -19,7 +19,9 @@ describe('loadEnvConfigJson()', () => {
 
 	test('Variables are in upper case', () => {
 		jest.doMock('../lib/loadConfig', () => jest.fn(() => mockConfig));
+		/* eslint-disable global-require */
 		require('../lib/index')();
+		/* eslint-enable global-require */
 
 		expect(process.env).toHaveProperty('USER', 'eddie');
 		expect(process.env).toHaveProperty('PASSWORD', 'hello-world');
@@ -31,7 +33,9 @@ describe('loadEnvConfigJson()', () => {
 			...mockConfig,
 			inUpperCase: false,
 		})));
+		/* eslint-disable global-require */
 		require('../lib/index')();
+		/* eslint-enable global-require */
 
 		expect(process.env).toHaveProperty('user', 'eddie');
 		expect(process.env).toHaveProperty('password', 'hello-world');
@@ -40,7 +44,9 @@ describe('loadEnvConfigJson()', () => {
 
 	test('Existed property should not be changed', () => {
 		jest.doMock('../lib/loadConfig', () => jest.fn(() => mockConfig));
+		/* eslint-disable global-require */
 		require('../lib/index')();
+		/* eslint-enable global-require */
 
 		expect(process.env).toHaveProperty('NODE_ENV', 'test');
 	});
