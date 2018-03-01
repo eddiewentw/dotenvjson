@@ -42,3 +42,7 @@ You can use a custom config file path.
 Default value: `true`
 
 You don't have to use upper case in config file. Parser transforms them to upper case if this is true. Or spelling names would be kept.
+
+### Change log
+
+Visit [CHANGELOG.md](https://github.com/EddieWen-Taiwan/dotenvjson/blob/master/CHANGELOG.md)
