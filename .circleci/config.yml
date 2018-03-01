@@ -33,6 +33,6 @@ jobs:
 
 workflows:
   version: 2
-  test-workflow:
+  basic-workflow:
     jobs:
       - test
