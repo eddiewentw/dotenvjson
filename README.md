@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/EddieWen-Taiwan/dotenvjson.svg)](https://david-dm.org/EddieWen-Taiwan/dotenvjson)
 [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg?style=flat-square)](https://github.com/conventional-changelog/standard-version)
 [![CircleCI](https://circleci.com/gh/EddieWen-Taiwan/dotenvjson.svg?style=shield)](https://circleci.com/gh/EddieWen-Taiwan/dotenvjson)
-[![Coverage Status](https://coveralls.io/repos/github/EddieWen-Taiwan/dotenvjson/badge.svg?branch=master)](https://coveralls.io/github/EddieWen-Taiwan/dotenvjson?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/EddieWen-Taiwan/dotenvjson/badge.svg?branch=release)](https://coveralls.io/github/EddieWen-Taiwan/dotenvjson?branch=release)
 
 
 This is a module to load .json file, like `config.json`, and export variables to `process.env`. Inspired by [dotenv](https://github.com/motdotla/dotenv).
