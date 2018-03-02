@@ -1,4 +1,5 @@
 const writeProcessEnv = require('../lib/writeProcessEnv');
+
 const mockConfig = {
 	path: '/does-not-matter',
 	inUpperCase: true,
