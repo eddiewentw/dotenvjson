@@ -1,20 +1,15 @@
+const writeProcessEnv = require('../lib/writeProcessEnv');
 const mockConfig = {
 	path: '/does-not-matter',
 	inUpperCase: true,
 };
 
 jest.mock('fs');
+jest.mock('../lib/writeProcessEnv');
 
 describe('loadEnvConfigJson()', () => {
 	afterEach(() => {
-		delete process.env.USER;
-		delete process.env.PASSWORD;
-		delete process.env.FOO;
-		delete process.env.user;
-		delete process.env.password;
-		delete process.env.foo;
-
-		jest.resetModules();
+		writeProcessEnv.mockClear();
 	});
 
 	test('Variables are in upper case', () => {
@@ -23,9 +18,11 @@ describe('loadEnvConfigJson()', () => {
 		require('../lib/index')();
 		/* eslint-enable global-require */
 
-		expect(process.env).toHaveProperty('USER', 'eddie');
-		expect(process.env).toHaveProperty('PASSWORD', 'hello-world');
-		expect(process.env).toHaveProperty('FOO', '123');
+		expect(writeProcessEnv).toHaveBeenCalledTimes(3);
+
+		expect(writeProcessEnv).toHaveBeenCalledWith('user', 'eddie', true);
+		expect(writeProcessEnv).toHaveBeenCalledWith('password', 'hello-world', true);
+		expect(writeProcessEnv).toHaveBeenCalledWith('foo', 123, true);
 	});
 
 	test('Don\'t force variables to be upper case', () => {
@@ -37,9 +34,11 @@ describe('loadEnvConfigJson()', () => {
 		require('../lib/index')();
 		/* eslint-enable global-require */
 
-		expect(process.env).toHaveProperty('user', 'eddie');
-		expect(process.env).toHaveProperty('password', 'hello-world');
-		expect(process.env).toHaveProperty('foo', '123');
+		expect(writeProcessEnv).toHaveBeenCalledTimes(3);
+
+		expect(writeProcessEnv).toHaveBeenCalledWith('user', 'eddie', true);
+		expect(writeProcessEnv).toHaveBeenCalledWith('password', 'hello-world', true);
+		expect(writeProcessEnv).toHaveBeenCalledWith('foo', 123, true);
 	});
 
 	test('Existed property should not be changed', () => {
@@ -48,6 +47,6 @@ describe('loadEnvConfigJson()', () => {
 		require('../lib/index')();
 		/* eslint-enable global-require */
 
-		expect(process.env).toHaveProperty('NODE_ENV', 'test');
+		expect(writeProcessEnv).not.toHaveBeenCalledWith('NODE_ENV', 'should-not-be-replaced', true);
 	});
 });
