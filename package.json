@@ -4,9 +4,9 @@
   "description": "Loads environment variables from .json file",
   "keywords": [
     "dotenvjson",
-    "env",
     ".env",
     ".env.json",
+    "env",
     "environment",
     "variables",
     "config",
