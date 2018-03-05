@@ -8,7 +8,7 @@
 
 This is a module to load .json file, like `config.json`, and export variables to `process.env`. Inspired by [dotenv](https://github.com/motdotla/dotenv).
 
-### Installation
+## Installation
 
 ```bash
 $ yarn add @eddiewen/dotenvjson
@@ -16,7 +16,7 @@ $ yarn add @eddiewen/dotenvjson
 # npm install --save @eddiewen/dotenvjson
 ```
 
-### Usage
+## Usage
 
 Create a `.env.json` file in the root folder of your project.
 
@@ -28,7 +28,7 @@ dotenvjson();
 
 And you get `process.env` now.
 
-##### Options
+#### Options
 
 - `path`
 
@@ -42,6 +42,6 @@ Default value: `true`
 
 You don't have to use upper case in config file. Parser transforms them to upper case if this is true. Or spelling names would be kept.
 
-### Change log
+## Change log
 
 Visit [CHANGELOG.md](https://github.com/EddieWen-Taiwan/dotenvjson/blob/master/CHANGELOG.md)
