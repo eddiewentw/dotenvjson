@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com:EddieWen-Taiwan/dotenvjson.git"
+    "url": "github.com:eddiewentw/dotenvjson.git"
   },
   "files": [
     "lib"
