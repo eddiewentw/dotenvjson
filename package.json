@@ -40,9 +40,9 @@
   },
   "author": "Eddie Wen <eddiewen.tw@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/EddieWen-Taiwan/dotenvjson",
+  "homepage": "https://github.com/eddiewentw/dotenvjson",
   "bugs": {
-    "url": "https://github.com/EddieWen-Taiwan/dotenvjson/issues",
+    "url": "https://github.com/eddiewentw/dotenvjson/issues",
     "email": "eddiewen.tw@gmail.com"
   }
 }
